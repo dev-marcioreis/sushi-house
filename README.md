@@ -2,7 +2,7 @@
 
 ---
 
-Este projeto será uma landingpage para lojas de sushi.
+Este projeto será uma Landing Page.
 
 ## 🚀 Em desenvolvimento...
 
