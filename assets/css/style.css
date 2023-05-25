@@ -222,7 +222,7 @@ img {
   .navbar__menu {
     position: absolute;
     top: 4.5rem;
-    right: -100%;
+    right: -120%;
     width: 20rem;
     height: 30rem;
     background: var(--gradiente-5);
