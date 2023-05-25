@@ -1,6 +1,7 @@
 /*==========Google Fonts==========*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 /*==========Reset==========*/
 *, *::before, *::after {
@@ -11,42 +12,19 @@
     outline: none;
     text-decoration: none;
     list-style: none;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /*==========Root==========*/
 :root {
 
-  --color-blue: hsl(221, 100%, 48%);
   --color-red: hsl(16, 98%, 50%);
   --color-pink: hsl(347, 100%, 71%);
-  --color-yellow: hsl(60, 100%, 50%);
-  --color-orange: hsl(34, 94%, 56%);
   --color-green: hsl(157, 72%, 66%);
   --color-dark: hsl(0, 0%, 13%);
   --color-black: hsl(240, 5%, 7%);
   --color-white: hsl(0, 0%, 100%);
   --color-transparent: hsla(0, 0%, 100%, 0);
-  --color-text: hsl(240, 1%, 49%);
-  --color-border: hsla(0, 0%, 0%, 0.5);
-
-  --font-size: .9rem;
-  --line-height: 1.6;
-
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
-  --transition: all 400ms ease-in-out;
-
-  --container-lg: 80%;
-  --container-md: 90%;
-  --container-max-wd: 1800px;
-
-  --z-tooltip: 10;
-  --z-fixed: 100;
-
-  --shadow: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
-  --shadow-1: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
 
   --gradiente-1: linear-gradient(180deg, hsl(357, 78%, 63%) 0%, hsl(353, 92%, 70%) 100%);
   --gradiente-2: linear-gradient(90deg, hsl(355, 37%, 88%) 0%, hsl(25, 76%, 90%) 100%); 
@@ -57,11 +35,17 @@
   --gradiente-7: linear-gradient(90deg, hsl(34, 94%, 56%) 0%, hsl(44, 100%, 66%) 100%); 
   --gradiente-8: linear-gradient(90deg, hsl(348, 53%, 65%) 0%, #ffc7a3 100%); 
 
-  --bg-1: hsl(232, 35%, 84%);
-  --bg-2: hsl(23, 100%, 82%);
-  --bg-3: hsl(322, 85%, 16%);
-  --bg-4: hsl(347, 100%, 71%);
-  --bg-5: hsl(49, 91%, 91%);
+  --font-size: .9rem;
+  --font-logo: 'Satisfy', cursive;
+  --line-height: 1.6;
+
+  --transition: all 400ms ease-in-out;
+
+  --container-lg: 80%;
+  --container-md: 90%;
+
+  --shadow: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
+  --shadow-1: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
 
 }
 
@@ -72,10 +56,10 @@ html {
 }
 body {
   background: var(--gradiente-5);
-  color: var(--color-text);
+  color: var(--color-black);
   line-height: var(--line-height);
   font-size: var(--font-size);
-  height: 100vh;
+  height: 300rem;
 }
 ::-webkit-scrollbar {
   width: .5rem;
@@ -84,7 +68,7 @@ body {
   background: var(--color-dark)
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-white);
+  background: var(--gradiente-5);
 }
 .container {
   width: var(--container-lg);
@@ -110,7 +94,7 @@ h4, h5, h6 {
   font-weight: 300;
 }
 a {
-  color: var(--color-text);
+  color: var(--color-black);
 }
 img {
   width: 100%;
@@ -119,7 +103,7 @@ img {
 
 
 /*==========Média Query Tablet==========*/
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .container{
       width: var(--container-md);
   }
@@ -142,6 +126,151 @@ img {
 @media (max-width: 768px) {
   h1 {
       font-size: 2rem;
+  }
+
+}
+
+
+/*==========Header==========*/
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: var(--gradiente-5);
+  transition: var(--transition);
+  z-index: 999;
+}
+.navbar {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar__logo, .toggle__btn, .change__theme {
+  display: flex;
+  cursor: pointer;
+}
+.navbar__logo {
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+.navbar__logo img {
+  width: 3rem;
+  transition: var(--transition);
+}
+.navbar__logo:hover img {
+  transform: scale(1.1);
+}
+.navbar__logo span {
+  font-family: var(--font-logo);
+  font-size: 1.8rem;
+  color: var(--color-white);
+  text-transform: capitalize;
+  text-shadow: var(--shadow-1);
+  transition: var(--transition);
+}
+.navbar__logo:hover span {
+  text-shadow: var(--shadow);
+}
+.toggle__btn {
+  font-size: 2rem;
+  display: none;
+}
+.change__theme {
+  font-size: 1.5rem;
+  color: var(--color-black);
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__list {
+  display: flex;
+  gap: 3rem;
+}
+.navbar__link {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.navbar__link:hover {
+  color: var(--color-red);
+}
+.navbar__image-1, .navbar__image-2 {
+  display: none;
+}
+
+/*==========JavaScript==========*/
+.scrolling {
+  box-shadow: var(--shadow);
+}
+
+/*==========Média Query Tablet==========*/
+@media (max-width: 992px) {
+
+  /*==========Header==========*/
+  .navbar__logo img {
+    width: 2.2rem;
+  } 
+  .navbar__logo span {
+    font-size: 1.5rem;
+  }
+  .navbar__menu {
+    position: absolute;
+    top: 4.5rem;
+    right: -100%;
+    width: 20rem;
+    height: 30rem;
+    background: var(--gradiente-5);
+    box-shadow: var(--shadow);
+    padding-block: 3rem;
+    transition: var(--transition);
+  }
+  .navbar__list {
+    flex-direction: column;
+    padding: .5rem;
+  }
+  .navbar__image-1, .navbar__image-2 {
+    position: absolute;
+    display: flex;
+    filter: contrast(1.4);
+  }
+  .navbar__image-1 {
+    top: .2rem;
+    left: .5rem;
+    width: 5rem;
+    transform: rotate(180deg);
+  }
+  .navbar__image-2 {
+    bottom: .9rem;
+    right: .2rem;
+    width: 5rem;
+    transform: rotate(40deg);
+  }
+  .toggle__btn {
+    display: flex;
+  }
+  #closeBtn {
+    display: none;
+  }
+  .change__theme {
+    position: absolute;
+    top: .7rem;
+    right: 3rem;
+  }
+  .overlay {
+    position: fixed;
+    top: 4.2rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-transparent);
+    z-index: -1;
   }
 
 }
