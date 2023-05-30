@@ -487,6 +487,86 @@ img {
   color: var(--color-white);
 }
 
+/*==========Footer==========*/
+.footer {
+  height: 40vh;
+  padding: 3rem 0 0;
+  margin-block-start: 15rem;
+  border-top: 1px solid var(--color-white);
+}
+.footer__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer__logo {
+  display: flex;
+  cursor: pointer;
+}
+.footer__logo {
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+.footer__logo img {
+  width: 3rem;
+  transition: var(--transition);
+}
+.footer__logo:hover img {
+  transform: scale(1.1);
+}
+.footer__logo span {
+  font-family: var(--font-logo);
+  font-size: 1.8rem;
+  color: var(--color-white);
+  text-transform: capitalize;
+  text-shadow: var(--shadow-1);
+  transition: var(--transition);
+}
+.footer__logo:hover span {
+  text-shadow: var(--shadow);
+}
+.footer__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7rem;
+}
+.footer__title {
+  font-family: var(--font-logo);
+  text-shadow: var(--shadow-1);
+  margin-block-end: 1rem;
+}
+.footer__links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .5rem;
+}
+.footer__link a {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.footer__link a:hover {
+  color: var(--color-white);
+}
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.socials .link a {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.socials .link a:hover {
+  color: var(--color-white);
+}
+
+
 
 
 /*==========Média Query Tablet==========*/
@@ -637,6 +717,17 @@ img {
     font-size: 3rem;
   }
 
+  /*==========Footer==========*/
+  .footer {
+    height: 60vh;
+    overflow: auto;
+  }
+  .footer__container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
 
 }
 
@@ -678,6 +769,26 @@ img {
   }
   .box__text h2 {
     font-size: 1.8rem;
+  }
+
+  /*==========Footer==========*/
+  .footer {
+    height: auto;
+  }
+  .footer__container {
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .footer__content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer__link a {
+    font-size: 1rem;
+  }
+  .socials {
+    gap: 1.5rem;
+    padding: 0 0 2rem 0;
   }
 
 }
