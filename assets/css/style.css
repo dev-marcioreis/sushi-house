@@ -324,6 +324,110 @@ img {
   }
 }
 
+/*==========Popular==========*/
+.popular {
+  margin-block-start: 15rem;
+}
+.popular__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  place-items: center;
+  gap: 1rem;
+}
+.popular__box {
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadow);
+  width: 100%;
+  height: 100%;
+  background: var(--gradiente-2);
+  transition: var(--transition);
+}
+.popular__box:hover {
+  box-shadow: var(--shadow-1);
+}
+.popular__box .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black);
+}
+.popular__text {
+  text-align: center;
+  margin-block-end: 1.5rem;
+}
+.popular__text h3 {
+  font-family: var(--font-logo);
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin-block-end: .5rem;
+}
+.popular__image {
+  width: 15rem;
+  height: 10rem;
+  margin: 0 auto;
+  padding: .5rem;
+  margin-block-end: 2rem;
+}
+.popular__image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  filter: contrast(1.1) brightness(1.1);
+}
+.popular__image.p1 {
+  transition: var(--transition);
+  animation: p1 3s linear infinite;
+}
+.popular__image.p2 {
+  transition: var(--transition);
+  animation: p2 3s linear infinite;
+}
+.popular__image.p3 {
+  transition: var(--transition);
+  animation: p3 3s linear infinite;
+}
+.popular__image.p4 {
+  transition: var(--transition);
+  animation: p4 3s linear infinite;
+}
+
+/*==========Animation==========*/
+@keyframes p1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes p2 {
+  0%, 100% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+}
+
+@keyframes p3 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes p4 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+}
 
 
 /*==========Média Query Tablet==========*/
@@ -444,6 +548,15 @@ img {
     padding: 1rem 0;
   }
 
+  /*==========Popular==========*/
+  .popular {
+    margin-block-start: 10rem;
+  }
+  .popular__box .btn {
+    background: var(--gradiente-8);
+  }
+
+
 }
 
 
@@ -471,6 +584,11 @@ img {
   }
   .about__image-right img {
     width: 45%;
+  }
+
+  /*==========Popular==========*/
+  .popular {
+    margin-block-start: 7rem;
   }
 
 }
