@@ -12,7 +12,7 @@ const showMenuNavbarList = () => {
 
 // Close menu navbar on click
 const hideMenuNavbarList = () => {
-    navbarMenuList.style.right = '-120%'
+    navbarMenuList.style.right = '-150%'
     closeMenuBtn.style.display = 'none'
     openMenuBtn.style.display = 'flex'
 }

@@ -43,6 +43,7 @@
 
   --container-lg: 80%;
   --container-md: 90%;
+  --container-max-wd: 1800px;
 
   --shadow: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
   --shadow-1: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
@@ -99,6 +100,19 @@ a {
 img {
   width: 100%;
   display: block;
+}
+.btn {
+  padding: .5rem 1rem;
+  background: var(--color-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn:hover {
+  box-shadow: none;
 }
 
 
@@ -209,6 +223,63 @@ img {
   box-shadow: var(--shadow);
 }
 
+/*==========Home==========*/
+.home {
+  background-image: url('../images/bg-home.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.home__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.home__image {
+  width: 35rem;
+  height: 35rem;
+  padding: 0 2rem;
+}
+.home__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: contrast(1.1) brightness(1.5);
+  mix-blend-mode: multiply;
+  transition: var(--transition);
+  animation: float-img 3s linear infinite;
+}
+
+/*==========Animation==========*/
+@keyframes float-img {
+  0%, 100% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.1);
+  }
+}
+
+.home__text {
+  padding: 0 2rem;
+  text-align: left;
+}
+.home__text h1 {
+  font-size: 4.5rem;
+  font-family: var(--font-logo);
+  color: var(--color-black);
+  text-shadow: var(--shadow-1);
+  text-transform: capitalize;
+}
+.home__text p {
+  font-size: 1.2rem;
+  margin-block-end: 1.5rem;
+}
+
+
+
 /*==========Média Query Tablet==========*/
 @media (max-width: 992px) {
 
@@ -222,7 +293,7 @@ img {
   .navbar__menu {
     position: absolute;
     top: 4.5rem;
-    right: -120%;
+    right: -150%;
     width: 20rem;
     height: 30rem;
     background: var(--gradiente-5);
@@ -271,6 +342,64 @@ img {
     height: 100%;
     background: var(--color-transparent);
     z-index: -1;
+  }
+
+  /*==========Home==========*/
+  .home {
+    height: 100vh;
+  }
+  .home__container {
+    flex-direction: column-reverse;
+    padding-block-start: 10rem;
+  }
+  .home__image {
+    width: 17rem;
+    height: 17rem;
+    padding: 1rem 0;
+  }
+  .home__text {
+    position: relative;
+    padding: 0;
+  }
+  .home__text h1 {
+    font-size: 3.5rem;
+  }
+  .home__text p {
+    font-size: 1rem;
+    margin-block-end: .5rem;
+  }
+  .home__text .btn {
+    position: absolute;
+    right: 0;
+    bottom: -10rem;
+    background: var(--gradiente-8);
+  }
+
+}
+
+
+/*==========Média Query Mobile==========*/
+@media (max-width: 768px) {
+
+  /*==========Home==========*/
+  .home__image {
+    width: 12rem;
+    height: 12rem;
+  }
+  .home__text h1 {
+    font-size: 3rem;
+  }
+  .home__text p {
+    margin-block-end: 1rem;
+  }
+
+}
+
+@media (max-width: 340px) {
+
+  /*==========Header==========*/
+  .navbar__menu {
+    width: 15rem;
   }
 
 }
