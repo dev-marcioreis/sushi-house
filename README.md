@@ -2,7 +2,7 @@
 
 ---
 
-Este projeto será uma Landing Page.
+Este projeto é uma Landing Page.
 
 ## 🚀 Finalizado!
 
