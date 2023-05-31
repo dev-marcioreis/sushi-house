@@ -34,3 +34,13 @@ if(window.innerWidth < 992) {
 window.addEventListener('scroll', () => {
     document.querySelector('.header').classList.toggle('scrolling', window.scrollY)
 })
+
+
+// Scroll Up
+const scrollUp = () => {
+    const scrollUp = document.querySelector('.scroll__up')
+
+    this.scrollY >= 350 ? scrollUp.classList.add('show__scrollUp') : scrollUp.classList.remove('show__scrollUp')
+}
+
+window.addEventListener('scroll', scrollUp)
