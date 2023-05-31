@@ -35,7 +35,6 @@ window.addEventListener('scroll', () => {
     document.querySelector('.header').classList.toggle('scrolling', window.scrollY)
 })
 
-
 // Scroll Up
 const scrollUp = () => {
     const scrollUp = document.querySelector('.scroll__up')
@@ -44,3 +43,4 @@ const scrollUp = () => {
 }
 
 window.addEventListener('scroll', scrollUp)
+
