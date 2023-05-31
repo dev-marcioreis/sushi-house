@@ -4,7 +4,7 @@
 
 Este projeto será uma Landing Page.
 
-## 🚀 Em desenvolvimento...
+## 🚀 Finalizado!
 
 ## 📋 Tecnologias
 HTML + CSS + JavaScript
@@ -15,4 +15,4 @@ Márcio Reis
 😊 Link de acesso: https://dev-marcioreis.github.io/sushi-house/
 
 ---
-![image](https://github.com/dev-marcioreis/sushi-house/assets/122680054/d7ffaaeb-d6bd-4c35-8053-6ce8a9623425)
+![image](https://github.com/dev-marcioreis/sushi-house/assets/122680054/b07e74bb-6556-4f72-b9d3-e2ec794817f1)
